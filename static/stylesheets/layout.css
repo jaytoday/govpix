@@ -1,0 +1,350 @@
+
+
+body {
+
+color: #242424;
+font: normal 1em/1.5em Georgia, serif;
+margin: 0;
+padding: 0;
+text-align: center; /* f<style type="text/css">
+
+
+
+</style>or ie5.5/win */
+
+
+}
+
+
+
+
+a, a:active {
+
+font-weight: bold;
+text-decoration: none;
+}
+
+a:hover {
+color: #005B8B;
+}
+
+blockquote, ol, p, ul {
+margin: 0 0 0.1em;
+padding: 0;
+}
+
+ol, ul {
+margin-left: 2em;
+margin-right: 2em;
+}
+
+blockquote {
+
+font-size: 1em;
+margin: .5em 0pt .5em 1em;
+padding: 0 2em 0 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+color: #FFFFFF;
+margin: 0 0 0;
+padding: 0;
+}
+
+h1 {
+font-size: 35px;
+line-height: 1.2;
+margin:0pt 0pt 0.5em 30px;
+}
+
+
+h1 a, h1 a:visited, h1 a:active {
+/* color: #fffff; */
+}
+
+h5 a, h5 a:visited {
+/* color: #fffff; */
+}
+
+h5 a:hover {
+color: #005B8B;
+}
+
+a, a:active {
+color: #ffffff; 
+font-weight: bold;
+text-decoration: none;
+}
+
+h2 a, a:active, a:hover a:visited {
+color: #005B8B;
+}
+
+
+h1 a:hover {
+color: #005B8B;
+text-decoration: none;
+}
+
+h4 a:hover {
+color: #005B8B;
+text-decoration: none;
+}
+
+
+
+h2 {
+color: #005B8B;
+font-size: 1em;
+margin-bottom: .5em;
+}
+
+h3 {
+font-size: 1.4em;
+}
+
+
+/* Content container */
+
+
+#content {
+/* margin: 1.5em auto 0; */
+text-align: left;
+width: 50em;
+}
+
+
+/* Metadata */
+
+
+#meta {
+list-style: none;
+margin: 0;
+padding: 0;
+text-align: right;
+}
+
+.jam {
+list-style: none;
+margin: 0;
+padding: 0;
+text-align: right;
+}
+
+#meta li {
+display: inline;
+}
+
+
+
+/* Individual Posts */
+
+
+
+.post {
+
+padding: 0em 0 0em;
+}
+
+.post .date {
+border-top: 3px solid #CCCCCC;
+border-bottom: 1px solid #CCCCCC;
+float: left;
+padding: .25em 1em;
+text-align: center;
+margin: 0.25em 1em 0.25em 20px;
+
+}
+
+.post .date .month, .post .date .day, .post .date .time {
+color: #999;
+display: block;
+font-weight: normal;
+}
+
+.post .date .month {
+letter-spacing: .05em;
+text-transform: uppercase;
+}
+
+.post .date .day {
+font-size: 1.3em;
+font-weight: bold;
+}
+
+.post .date a, .post .date a:visited, .post .date a:active {
+font-weight: normal;
+}
+
+.post .regular, .post .quote, .post .link, .post .conversation,
+.post .photo, .post .video, .post .audio {
+margin-left: 1em;
+padding: 0;
+}
+
+.post .photo .caption, .post .video .caption,
+.post .quote .source, .post .audio .caption {
+display: block;
+margin-bottom: 1.5em;
+margin-top: 1.5em;
+}
+
+.post .quote .source {
+font-style: italic;
+text-align: right;
+}
+
+.post .conversation ul {
+list-style: none;
+margin: 0 .5em 1.5em;
+padding: 0;
+}
+
+.post .conversation ul li {
+padding: .5em 0;
+}
+
+.post .conversation ul li .person {
+font-weight: bold;
+margin-right: 1em;
+}
+
+.post .post-footer {
+color: #8C8C8C;
+margin-left: 7em;
+text-align: right;
+margin-top:10px;
+
+}
+
+.post .post-footer .permalink, .post .post-footer .when {
+font-size: .75em;
+font-weight: normal;
+margin-left: 1em;
+
+}
+
+/* Previous and Next Links */
+
+
+
+#prev-next {
+margin-left: 7em;
+padding: 1.5em 0 3em;
+}
+
+#prev {
+margin-right: 1.5em;
+}
+
+#next {
+margin-left: 1.5em;
+}
+
+#footer {
+border-top: 1px solid #8C8C8C;
+font-size: .85em;
+}
+
+#footer a, #footer a:active, #footer a:visited {
+color: #CCCCCC;
+}
+
+#footer ul {
+list-style: none;
+margin: 1em 0;
+padding: 0;
+text-align: center;
+}
+
+#footer ul li {
+display: inline;
+margin: 0.5em;
+}
+
+#rap{
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+background: #6E8EAE;/* url(bgfoot.jpg);*/
+background-position: bottom right;
+background-repeat: no-repeat;
+width: 100%;
+min-height: 100%;
+height: 100%;
+voice-family: "\"}\"";
+voice-family: inherit;
+height: auto;
+text-align: center;
+}
+
+html>body #rap {
+height: auto;
+width: 100%;
+}
+
+#main {
+margin: -30pt 0pt 0pt 10px;
+padding: 0 0 0 0;
+
+}
+
+#menu {
+float: right;
+width: 22%;
+height: auto;
+margin: 0 0 0 0px;
+}
+#nav {
+padding-left: 0px;
+padding-right: 0px;
+float: left;
+width: 100%;
+text-align: left;
+}
+#content {
+float: left;
+width: 50em;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+#footer {
+background: url(fbbody-r.gif) no-repeat bottom right;
+width: 60%;
+color: #414141;
+margin: 0 0 5px 15px;
+text-transform: capitalize;
+clear: both;
+padding: 0 0 0 0;
+
+}
+* html #footer{
+margin: 0 0 135px 5px;
+float: left;
+}
+#header{
+height: 200px;
+margin: 0;
+}
+
+#masthead{
+background: url(bg.jpg);
+background-position: top left;
+background-repeat: repeat-x;
+background-color: #6E8EAE;
+/* 250px */
+height: 46px;
+margin: 0;
+padding: 0;
+}
+
+
+
+.reset{
+clear: both;
+height: 1px;
+}
+.reset2{
+clear: both;
+height: 20px;
+}

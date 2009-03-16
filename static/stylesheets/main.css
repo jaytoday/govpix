@@ -1,0 +1,653 @@
+
+
+
+@import url("layout.css");
+
+
+
+
+html,body{
+margin: 0;
+padding: 0;
+background-color: #6E8EAE;
+}
+
+
+body {
+padding: 0 0 0 0;
+font-family: "Georgia", "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+
+color: #242424;
+text-align: center; 
+width: 100%;
+min-width: 1000px;
+width:expression(document.body.clientWidth < 810? "800px": "auto");
+
+
+
+}
+
+.title {
+
+text-align: center; 
+margin-top: 25px;
+
+}
+
+.tagline{
+display:block;
+font-size:0.5em;
+margin: -48px 200px;
+position:absolute;
+}
+
+#masthead h1{
+color: #FA77E6;
+margin: 0 0 0 2px;
+padding: 140px 0 0 160px;
+font-size: 16px;
+}
+#masthead h1 a{
+color: #fff;
+text-decoration: none;
+text-transform: uppercase;
+}
+#masthead h2{
+color: White;
+font-size: 12px;
+margin-left: 70px;
+padding-left: 100px;
+padding-top: 0px;
+height: 28px;
+margin-top: 0px;
+}
+* html #masthead h2{
+margin-left: 45x;
+padding-left: 33px;
+float: left;
+}
+a img {
+border: none;
+}
+
+#headeradd{
+margin-left: 40px;
+margin-top: 30px;
+}
+
+
+acronym, abbr {
+border-bottom: 1px dotted #B5DCFA;
+}
+
+
+
+
+acronym, abbr, span.caps {
+cursor: help;
+font-size: 11px;
+letter-spacing: .07em;
+}
+
+
+
+.appspanel {
+
+margin: 0px 0px 270px 100px;
+
+}
+
+.namepanel {
+
+border-right:2px dotted #EEEEEE;
+float:left;
+margin:-10pt 0 0 -100px;
+padding:0 55px 0 0;
+
+}
+
+.zippanel {
+
+margin:-13px 260px;
+position:absolute;
+
+}
+
+
+
+
+.footnote{
+font-size:0.7em;
+margin-left:0;
+margin-top:54px;
+position:absolute;
+width:600px;
+}
+
+
+
+#aboutapp{
+margin:15px 0px;
+position:absolute;
+text-align:center;
+}
+
+h1 {
+
+padding: 0px;
+text-align: left;
+}
+
+
+
+
+
+
+
+
+h2 {
+font-size: 22px;
+font-weight: bold;
+margin: 15px 20px 20px 25px;
+padding-bottom: 2px;
+color: #242424;
+}
+
+
+
+
+
+
+h3.fix{
+font-size: 20px;
+font-weight: bolder;
+text-transform: capitalize;
+margin: 5px 0 0 20px;
+color: #8C8C8C;
+}
+
+h3 a {
+
+margin: 0 0 -20 0;
+padding: 0 0 -20 0;
+}
+
+h3 a {
+font-size: 25px;
+font-weight: bolder;
+margin-bottom:10px;
+padding: 0 0 10px 0;
+color: #242424 ;
+display: block;
+text-decoration: none;
+text-align: center
+}
+* html h3 a{
+margin: 0 0 0 0;
+padding: 0 0 0 0px;
+width: 80%;
+}
+.date{
+font-size: 10px;
+font-weight: normal;
+color: #74C0FA;
+}
+
+
+
+.paneltitle {
+display: block;
+text-align: center 
+}
+
+
+
+.answer{
+
+border-top-color:#EEEEEE;
+border-top-style:dotted;
+border-top-width:3px;
+padding:20px 0pt 20px 0px;
+margin:0pt 0pt 0pt 140px;
+width:250px;
+
+}
+
+.incorrect{
+color:red;
+}
+
+.correct{
+color:#005B8B;
+}
+
+.main {
+text-align: center; 
+padding-right: 80px;
+padding-top: 10px;
+margin-left:-50px;
+
+}
+
+.description{
+
+padding-bottom:5px;
+border-bottom-color:#EEEEEE;
+border-bottom-style:dashed;
+border-bottom-width:1px;
+margin:0pt 0px 0pt 290px;
+position: absolute;
+font-size: x-small;
+text-align: left;
+height:75px;
+width:320px;
+position:absolute;
+margin-left: 230px;
+
+}
+
+.sunlightlogo {
+margin: 25px;
+float: left;
+position:relative;
+
+}
+
+.appengine{
+margin:45pt 345px 0pt 335px;
+padding-top:5px;
+position: absolute;
+font-size: x-small;
+text-align: left;
+height:75px;
+width:300px;
+
+
+}
+
+.applogo{
+margin-left:-45px; 
+margin-bottom:-50px;
+position:relative;
+
+}
+
+.apptext{
+
+
+}
+
+h3 a:hover {
+
+color: #242424;
+}
+
+
+h1 a:hover, h2 a:hover, .thecontent a:hover,   {
+
+}
+
+
+
+
+
+
+
+
+#getit{
+margin-left: 10px;
+margin-top: -30px;
+}
+
+
+h3#respond{
+background: url(img/bobble.gif) no-repeat;
+height: 49px;
+padding: 42px 0 0 48px;
+margin: 0 0 0 0;
+color: #242424;
+font-size: 15px;
+}
+h3#comments{
+background: url(cornerarrow.gif) no-repeat;
+height: 89px;
+padding: 41px 0 0 163px;
+margin: -5px 0 0 0;
+color: #fff;
+font-size: 14px;
+}
+
+
+
+
+
+
+p, li, .feedback {
+font-size: 12px;
+}
+
+
+
+
+
+
+ul.panel-meta {
+list-style: none;
+}
+
+
+
+
+
+
+
+
+ul.panel-meta span.panel-meta-key {
+font-weight: bold;
+}
+
+
+
+
+.feedback {
+color: #ccc;
+text-align: left;
+font-size: 11px;
+float: right;
+margin: -20px 20px 0 0;
+padding: 0 0 0 0;
+}
+
+
+.feedback a{
+color: #97C000;
+text-decoration: none;
+font-size: 11px;
+cursor: pointer;
+}
+
+
+
+
+#clearer {
+clear: both;
+margin: 0;
+padding: 0;
+}
+.clearer{
+clear: both;
+margin: 0;
+padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#content .panel{
+background: url(csbbody-r.gif) no-repeat bottom right;
+
+
+color: #242424;
+margin: 0 0 0 0;
+padding-bottom:1px;
+
+
+
+
+}
+
+fieldset { 
+
+-moz-border-radius: 8px; border-radius: 0 px; 
+
+} 
+
+
+#content .panelop {
+background: url(csbhead-r.gif) no-repeat top right;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+text-align: center;
+}
+#content .panelop .pheadfill {
+background: url(csbhead-l.gif) no-repeat top left;
+margin: 0 0 0 0;
+padding: 10px 10px 5px 0;
+color: white; 
+font-weight: bold; 
+font-size: 1.2em; 
+line-height: 1em;
+
+}
+#content .panelcontent{
+background: url(csbbody-l.gif) no-repeat bottom left;
+margin: 0 0 0 0;
+
+color: #242424;
+
+padding-left:40px;
+padding-bottom:15px; 
+padding-right:20px;
+
+}
+
+.innercontent{
+
+margin-left:90px;
+
+}
+
+.login {
+
+border: 1px dashed rgb(238, 238, 238);
+text-align: center; 
+margin-left: 160px; 
+width: 170px; 
+font-size: 0.7em;
+}
+
+
+.thecontent{
+width: 95%;
+
+padding-top:10px; 
+background:white; 
+margin-bottom: 20px;
+
+
+
+}
+
+.thecontent a{
+
+color: #005B8B;
+}
+
+.thecontent a:hover{
+color: #242424;
+
+}
+
+.bluebackground a{
+
+color: #005B8B;
+padding:3px;
+
+}
+
+.bluebackground a:hover {
+background:white none repeat scroll 0% 50%;
+color:#3366BB;
+
+
+}
+
+
+
+.stem {
+position: relative; 
+top: -22px;
+left: 3%; 
+}
+
+.pic:hover img{
+border: 1px solid #333333;
+}
+.pic:hover{
+color: #333333; /* Dummy definition to overcome IE bug */
+
+}
+
+.cc{
+position: relative;
+right: -4px;
+top: -40px;
+}
+
+.about{
+position: relative;
+right: 11px;
+top: -25px;
+}
+
+
+
+
+
+#content .panel .panelcontent p img{
+
+border: none;
+margin-right: 15px;
+margin-bottom: 10px;
+text-align: center;
+}
+
+
+
+.panel p a{
+color: #005B8B;
+text-decoration: none;
+font-style: bold;
+}
+
+
+
+.panel p {
+margin: 5px 15px 10px 20px;
+text-transform: none;
+}
+
+
+
+
+
+
+.noposts{
+font-size: 20px;
+color: White;
+background: url(img/noposts.jpg) no-repeat top left;
+height: 60px;
+padding: 18px 0 0 75px;
+margin-left: 80px
+}
+
+
+
+
+
+
+
+h2#flickr{
+}
+
+
+
+
+
+
+#header, #header a:link {
+font-size: 20px;
+font-weight: normal;
+color: #ccc;
+text-decoration: none;
+}
+
+
+#header a:hover {
+color: #c00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.page_item {
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+
+
+
+
+
+
+.licontainer{
+margin: 4px 0 0 0;
+background: url(img/subitem.gif) repeat-x bottom left;
+height: 40px;
+float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

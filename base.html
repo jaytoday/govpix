@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="/static/stylesheets/main.css" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+
+{% block head %}{% endblock head %}
+<title>GovPix: an easier way to resolve photos of the U.S Congress</title>
+
+</head>
+
+<body>
+
+<div id="masthead"></div>
+
+<div id="main">
+
+<div id="contain">     
+<div id="content">
+<div class="title"> <h1>
+<a href="/">{% block title %} 
+
+
+{% endblock title %} </a>
+
+
+</h1></div> 
+<div id="meta"> 
+
+
+
+{% block link %}
+
+{% endblock link %}
+
+
+
+<div id="panels" class="autopagerize_page_element">
+
+
+
+
+
+<div class="panel" style="padding-bottom:0px;">
+
+<div class="panelop"> <div class="pheadfill style4">&nbsp;</div></div>
+
+<div class="panelcontent" > <div class="thecontent">
+<div class="innercontent">
+
+{% block login_status %}
+{% ifequal login_status "not_logged_in" %}
+<div class="login">
+<a href="{{ url }}">{{ url_linktext }}</a> to track your score.
+</div>
+
+{% endifequal %}
+{% endblock login_status %}
+
+
+
+
+<div class="main">
+
+{% block main %}
+
+
+
+
+{% endblock main %}
+
+</div>
+
+
+</div> </div></div></div></div>
+
+<div id="aboutfooter">
+
+<div class="description">
+<img class="sunlightlogo" width="100" src="http://wiki.sunlightlabs.com/skins/common/images/sunlightWikiLogo.png"/> 
+<div id="sunlight"><br/> 
+Help Spread The <a href="http://sunlightfoundation.com/">Sunlight </a><br/>  <a href="http://sunlightfoundation.com/resources">Resources </a> -- <a href="http://sunlightfoundation.com/grants">Grants </a> -- <a href="http://www.sunlightlabs.org/">Labs </a>
+
+</div>
+
+<div id="aboutapp" class="apptext"><a href="http://code.google.com/p/frappquiz/">Download the Source Code</a> &nbsp;|&nbsp; There's no place like <a href="http://jamtoday.beehold.us">homepage</a>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+{% block body %}
+{% endblock body %}
+
+
+</body>
+</html>
