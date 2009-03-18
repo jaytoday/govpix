@@ -5,10 +5,24 @@ from google.appengine.ext import webapp
 from google.appengine.ext.webapp import template
 import datetime
 
+# My Settings (You Can Change These)
+PERSONAL_URL = "http://www.jamtoday.org"
+CODE_URL = "http://github.com/jamslevy/govpix/tree"
 # File caching controls
 FILE_CACHE_CONTROL = 'private, max-age=86400'
 FILE_CACHE_TIME = datetime.timedelta(days=20)
 
+"""
+
+If no argument is specified, intro.html template is rendered.
+
+Otherwise, get_image() method attempts to find a match for the query. 
+
+If successful, JPG is opened and returned. Responses are all cached for improved performance on subsequent calls. 
+
+TODO: Should it return a 500 error (or other HTTP status) instead of nothing? 
+
+"""
 class MainHandler(webapp.RequestHandler):
 
    def get(self):
@@ -22,8 +36,8 @@ class MainHandler(webapp.RequestHandler):
 
 
    def intro(self):
-   	template_values = {}
-	self.response.out.write(template.render('intro.html', template_values))
+   	template_values = {'PERSONAL_URL': PERSONAL_URL, 'CODE_URL': CODE_URL}
+	self.response.out.write(template.render('templates/intro.html', template_values))
 
 
    def set_expire_header(self):

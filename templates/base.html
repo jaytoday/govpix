@@ -51,15 +51,6 @@
 <div class="panelcontent" > <div class="thecontent">
 <div class="innercontent">
 
-{% block login_status %}
-{% ifequal login_status "not_logged_in" %}
-<div class="login">
-<a href="{{ url }}">{{ url_linktext }}</a> to track your score.
-</div>
-
-{% endifequal %}
-{% endblock login_status %}
-
 
 
 
@@ -86,7 +77,7 @@ Help Spread The <a href="http://sunlightfoundation.com/">Sunlight </a><br/>  <a 
 
 </div>
 
-<div id="aboutapp" class="apptext"><a href="http://github.com/jamslevy/govpix/tree">Download the Source Code</a> &nbsp;|&nbsp; There's no place like <a href="http://jamtodayorg">homepage</a>
+<div id="aboutapp" class="apptext"><a href="{{ CODE_URL }}">Download the Source Code</a> &nbsp;|&nbsp; There's No Place Like <a href="{{ PERSONAL_URL }}">Homepage</a>
 </div>
 </div>
 
