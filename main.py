@@ -23,6 +23,8 @@ If successful, JPG is opened and returned. Responses are all cached for improved
 TODO: Should it return a 500 error (or other HTTP status) instead of nothing? 
 
 """
+
+
 class MainHandler(webapp.RequestHandler):
 
    def get(self):
