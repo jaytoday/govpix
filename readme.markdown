@@ -9,11 +9,11 @@ GovPix is a GPLv3 licensed application that uses the Sunlight Labs API to disamb
 For development updates, visit the JamToday blog at http://www.jamtoday.org.
 
 
+
 Release Notes
------------- 
+------------
 
-
- * March 19, 2009 
+  March 19, 2009 
     - Fuzzy name search and zip code search added.
     - Because App Engine does not support PIL, Capitol Words API integration have been removed (for now). 
 
