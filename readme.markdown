@@ -6,14 +6,16 @@ GovPix
 
 GovPix is a GPLv3 licensed application that uses the Sunlight Labs API to disambiguate search terms into images of congressional representatives.
 
-For development updates, visit the JamToday blog at http://www.jamtoday.org.
+For development updates, visit http://www.jamtoday.org.
+
+------------
 
 
 
 Release Notes
 ------------
 
-  March 19, 2009 
+- March 19, 2009 
     - Fuzzy name search and zip code search added.
     - Because App Engine does not support PIL, Capitol Words API integration have been removed (for now). 
 
