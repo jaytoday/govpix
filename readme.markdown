@@ -4,7 +4,7 @@ GovPix
 ![Gov Logo](http://govpix.appspot.com/static/collage.png)
 
 
-GovPix is a GPLv3 licensed application that uses the Sunlight Labs API to disambiguate search terms into images of congressional representatives.
+GovPix is a GPLv3 licensed application that uses the Sunlight Labs API to disambiguate search terms into images of United States Congress representatives.
 
 For development updates, visit http://www.jamtoday.org.
 
