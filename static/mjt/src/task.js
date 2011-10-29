@@ -1,6 +1,6 @@
 
 /**
- *  asynchronous task framework 
+ *  asynchronous task framework
  *
  *  a task works like a callback but with more goodies.
  *  tasks provide:
@@ -14,7 +14,7 @@
  *
  *  uses:
  *    util.js
- *  
+ *
  */
 
 
@@ -32,7 +32,7 @@ mjt._init_existing_token = ['init_existing_token'];
 
 /**
  *  @class a class representing an asynchronous task
- * 
+ *
  *  the state machine cycle of a task is
  *    init --> wait --> ( ready | error )
  *
@@ -158,7 +158,7 @@ mjt.define_task = function(sooper, params) {
  *  the default timeout for set_timeout, in milliseconds.
  *  this is currently set to 10 seconds.
  *  the value has not been tuned for general use.
- *  the freebase.com service will usually time out a 
+ *  the freebase.com service will usually time out a
  *   request after 8 seconds so longer than that.
  *
  *  @type int (milliseconds)
@@ -176,7 +176,7 @@ mjt.Task.pending = null;
 mjt.Task._on_pending_empty = [];
 
 /**
- *  return a new mjt.Task that will notify when 
+ *  return a new mjt.Task that will notify when
  *   the list of pending tasks becomes empty.
  *
  */
@@ -236,7 +236,7 @@ mjt.Task.show_pending = function() {
  *
  *  right now parameters only have .name but later
  *  they may have defaults and docstrings.
- *  
+ *
  */
 mjt.Task.prototype.init = function() {
     //mjt.log('TASK INIT', this.parameters, arguments);
@@ -307,7 +307,7 @@ mjt.Task.prototype.clear_timeout = function () {
  * if any prereq tasks go into error state, so does this.
  * when *all* required tasks are ready, this.request() is called.
  * otherwise, wait.
- *  
+ *
  * @parm task  the task depended upon
  */
 mjt.Task.prototype.require = function (prereq) {
@@ -343,7 +343,7 @@ mjt.Task.prototype.require = function (prereq) {
  *
  *  you *must* call this if you have called .require(),
  *   or the ready state will never be reached.
- *  
+ *
  * @parm task  the task depended upon
  *
  * @see mjt.Task.require
@@ -386,7 +386,7 @@ mjt.Task.prototype._prereqs_check = function () {
  *
  *  "subclasses" may override this method to
  *  do anything once prerequisites are ready.
- *  
+ *
  *  many of the properties and methods here are
  *  marked hidden with _ prefixing to avoid namespace
  *  conflicts.  subclasses should avoid the _ prefix.
@@ -522,7 +522,7 @@ mjt.Task.prototype.ready = function (result) {
     if (this.state !== 'wait') {
         throw new Error('task.ready() called in bad state');
     }
-    
+
     this._onerror = null;
     this.clear_timeout();
     this.state = 'ready';
@@ -538,7 +538,7 @@ mjt.Task.prototype.ready = function (result) {
     return this;
 };
 
-// internal 
+// internal
 mjt.Task.prototype._error = function (messages, error_chain) {
     this._prereqs = null;
     this._onready = null;
@@ -565,7 +565,7 @@ mjt.Task.prototype._error = function (messages, error_chain) {
     // nothing is done with this yet
     //  we only report the first error that caused a failure.
     this._error_chain = error_chain;
-                 
+
     var args = [messages[0].code, messages[0].message, messages[0].full];
 
     this._state_notify('error', callbacks, args);

@@ -3,7 +3,7 @@
  *
  *  mjt utility library:
  *
- *  
+ *
  *
  *  functions not needed for mjt.task should be moved out.
  */
@@ -298,7 +298,7 @@ mjt.teardown_dom_sibs = function (elt, elt_only) {
     while (elt !== null) {
         for (var k in elt) {
             //if (!elt.hasOwnProperty(k)) continue;
-    
+
             if (/^on/.exec(k))
                 elt[k] = null;
         }
@@ -371,7 +371,7 @@ mjt.shallow_extend = function (d) {
  *                 will call obj[method] with the bound arguments,
  *                 followed by whatever additional arguments
  *                 were passed to the thunk.
- *  
+ *
  *  the object, method key, and any other arguments
  *   are bound when mjt.thunk(method, obj, ...) is
  *   invoked.
@@ -384,7 +384,7 @@ mjt.thunk = function (method, obj) {
 
 /**
  *  create a thunk.
- * 
+ *
  *  utility for function currying.
  *    similar to .partial()
  *
@@ -406,25 +406,25 @@ mjt.thunk = function (method, obj) {
  *   thunk.thunk_id
  *
  *  vthunk has several call forms:
- * 
+ *
  *    vthunk(arguments) or
  *    vthunk([arg0, ...]))
  *      if the first argument is an array, vthunk treats it
  *        as the argument list and then tries one of the
  *        forms below:
- * 
+ *
  *    vthunk(bound_method_name, bound_this, bound_arg_0, ...)
  *      if the first argument is a string, vthunk treats it
  *        as a method name.  the second argument must be an
  *        object, which will be bound as this.
- * 
+ *
  *      when thunk(call_arg_0, ...) is executed, this will happen:
  *        bound_this[bound_method_name](bound_arg_0, ..., call_arg_0, ...)
- * 
+ *
  *    vthunk(bound_function, bound_arg_0, ...)
  *      otherwise the first argument must be a function.
  *      bound_this will be set to null.
- *    
+ *
  *      when thunk(call_arg_0, ...) is executed, this will happen:
  *        bound_function(bound_arg_0, ..., call_arg_0, ...)
  *      (except this===null inside bound_function, rather than this===window)
@@ -437,11 +437,11 @@ mjt.thunk = function (method, obj) {
  *      it may be shared.
  *      because we're getting out of the way, bound_function
  *      will be called with this===window.
- *    
+ *
  */
 mjt.vthunk = function () {
     var bound_this, bound_func, bound_args;
-        
+
     var arg0 = arguments[0];
     if (typeof arg0 == 'object' && typeof arg0.length == 'number') {
         bound_args = mjt.makeArray(arg0);
@@ -492,7 +492,7 @@ mjt.vthunk = function () {
         return func.apply(obj, call_args);
     };
 
-    // a thunk is a javascript Function, for speed and 
+    // a thunk is a javascript Function, for speed and
     //   for most common usage.
     // but it's nice to treat it like an object in some ways.
     // so instead of just capturing the environment we explicitly
@@ -585,7 +585,7 @@ mjt.label_package = function (dotpath) {
 mjt.isFunction = function (fn)  {
     // This may seem like some crazy code, but trust me when I say that this
     // is the only cross-browser way to do this. --John
-    return !!fn && typeof fn != "string" && !fn.nodeName && 
+    return !!fn && typeof fn != "string" && !fn.nodeName &&
     fn.constructor != Array && /function/i.test( fn + "" );
 };
 
@@ -601,6 +601,6 @@ mjt.makeArray = function( a ) {
 	    r.push( a[i] );
     else
 	r = a.slice( 0 );
-    
+
     return r;
 };

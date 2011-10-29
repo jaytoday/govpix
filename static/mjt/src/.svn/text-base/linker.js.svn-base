@@ -24,13 +24,13 @@ mjt.Resource = function (restype, url, title, type) {
 mjt.Resource.prototype.iframe_loaded = function(k, iframe) {
     var idoc = (iframe.contentWindow
                 || iframe.contentDocument);
-    // mjt.log('IFRLO', this, k, iframe);    
+    // mjt.log('IFRLO', this, k, iframe);
     if (idoc.document)
         idoc = idoc.document;
     var ibody = idoc.getElementsByTagName('body')[0];
 
     var load_t0 = (new Date()).getTime();
-    
+
     //mjt.log('idoc', idoc.html, ibody, iframe, iframe.contentWindow.document);
     var reqpkg = new mjt.TemplatePackage();
     reqpkg.source = this.url;
@@ -63,7 +63,7 @@ mjt.Resource.prototype.load_resource = function (k) {
         mjt.include_js_async(this.url, k);
         break;
       case 'mjt':
-        mjt.dynamic_iframe_async(this.url, 
+        mjt.dynamic_iframe_async(this.url,
                                  mjt.vthunk(['iframe_loaded', this, k]));
         break;
 
@@ -113,7 +113,7 @@ mjt.TemplatePackage.prototype.compile_document = function (top, targs) {
         mjt.error('missing prerequisites for template package', this, this._prereqs);
         throw new Error('missing prerequisites for template package');
     }
-    
+
     if (typeof targs == 'undefined')
         targs = [];
     this._args = targs;
@@ -184,7 +184,7 @@ mjt.TemplatePackage.prototype.compile_document = function (top, targs) {
 
 /**
  *  create an IFRAME that loads a particular uri.
- * 
+ *
  *  @param id  string  the HTML id= attribute for the new IFRAME.
  *  @param url uri     the uri to fetch.
  *  @returns   element the IFRAME dom element
@@ -204,7 +204,7 @@ mjt.dynamic_iframe = function (id, url) {
 /**
  *  create an IFRAME that loads a particular uri, and
  *  invoke a callback when complete.
- * 
+ *
  *  @param url uri     the uri to fetch.
  *  @param k   function called when the load is complete.
  *  @return undefined (invokes k(element) with no arguments on load,

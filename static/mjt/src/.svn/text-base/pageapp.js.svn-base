@@ -80,7 +80,7 @@ mjt.App.prototype.init = function () {
 
 /**
  *  register an onstatechange handler
- * 
+ *
  */
 mjt.App.prototype.onstatechange = function (THUNK_ARGS) {
     var tid = mjt.uniqueid('statecb');
@@ -111,7 +111,7 @@ mjt.App.prototype._handle_onhistory = function (rstate) {
     mjt.log('yui setting state', rstate, typeof this.state);
 
     if (rstate === null) {
-        rstate = YAHOO.util.History.getCurrentState(this.yui_history_id); 
+        rstate = YAHOO.util.History.getCurrentState(this.yui_history_id);
         mjt.log('yui history onLoadEvent:', rstate);
     } else {
         mjt.log('yui history state:', rstate);
@@ -141,7 +141,7 @@ mjt.App.prototype.init_state = function () {
     var history = YAHOO.util.History;
 
     // yui history mechanism overrides query args
-    var init_state = history.getBookmarkedState(this.yui_history_id); 
+    var init_state = history.getBookmarkedState(this.yui_history_id);
     if (!init_state) {
         init_state = rison.encode_object(this.state)
     }
@@ -163,7 +163,7 @@ mjt.App.prototype.init_state = function () {
     history.onLoadEvent.subscribe(mjt.vthunk('_handle_onhistory', this, null));
 
     // must be done last
-    history.initialize(); 
+    history.initialize();
 
     return this;
 };
@@ -308,7 +308,7 @@ mjt.App.prototype.jsvar_getset = function (varpath, value) {
 
 
 /**
- *  encode the app state into a string, suitable for use in a uri 
+ *  encode the app state into a string, suitable for use in a uri
  *
  *  this is complicated by the desire to have human-readable
  *  uris and by a certain amount of legacy cruft.
@@ -383,7 +383,7 @@ mjt.App.prototype.decode_uristate = function(qstr) {
  * create a url that propagates the mjt application state.
  *
  * for use primarily if yui history is not present
- * 
+ *
  * @param base    URI     the base url, with no query or fragment component
  * @param values  Object  additional state to encode into the query component
  * @returns       URI     a URI constructed from base, values, and

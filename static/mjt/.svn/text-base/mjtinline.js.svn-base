@@ -1,6 +1,6 @@
 //
 //  this is designed to load mjt from an inline <script> tag
-// 
+//
 //  once included, it waits for the the DOM to load and searches
 //   for a tag with class="mjtinline" that encloses the <script> tag.
 //  it then runs that element as a Mjt template.
@@ -71,7 +71,7 @@ if (typeof mjtinline !== 'object') {
         var uniqid = '__mjtinline_' + (mjtinline.count++);
 
         // console.log('mjtinline found', uniqid);
-        
+
         // leave a placeholder behind to mark this script tag
         document.write('<span id="' + uniqid + '"></span>')
 
@@ -81,7 +81,7 @@ if (typeof mjtinline !== 'object') {
             mjtinline.pending_timeout = window.setTimeout(mjtinline.await_ready, 100);
     };
 
-    
+
     mjtinline.await_ready = function () {
         var retry = false;
 

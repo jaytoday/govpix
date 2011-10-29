@@ -5,7 +5,7 @@
  *  license: http://www.json.org/license.html
  *
  *  hacked so it doesn't mess with Object.prototype
- *  
+ *
  *
  */
 /*
