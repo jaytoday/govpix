@@ -38,7 +38,7 @@ mjt.JsonP.prototype.init = function () {
  *  setting it up means we own it and
  *  are responsible for maintainance
  *  and clean up here too.
- *   
+ *
  */
 mjt.JsonP.prototype.install = function () {
     //mjt.log('new jsonp', this._cbid);
@@ -57,7 +57,7 @@ mjt.JsonP.prototype.install = function () {
 /**
  *  send a jsonp request to a complete url
  *
- *  
+ *
  */
 mjt.JsonP.prototype.request = function () {
     var cb = mjt.JsonP._cb[this._cbid];
@@ -101,7 +101,7 @@ mjt.JsonP.prototype.request = function () {
 
 /**
  *  handle normal completion of a JSONP request
- * 
+ *
  *  @param ... all arguments will be passed on to the ready() call
  */
 // XXX varargs
@@ -172,7 +172,7 @@ mjt.JsonP.prototype.generate_callback = function (urlbase) {
 
     var jsonp = cbsaved._jsonp;
 
-    // if urlbase matches, use the same 
+    // if urlbase matches, use the same
     if (jsonp._urlbase === this._urlbase)
         return 'mjt.JsonP._cb.' + this._cbid;
 
@@ -241,7 +241,7 @@ mjt.dynamic_script = function (tag_id, url, text) {
 /**
  * evaluate javascript code from a uri, and invoke a callback
  *  when done.
- * 
+ *
  * @param url uri to fetch the javascript from.
  * @param k   function called when the load is complete.
  * @return undefined invokes k() with no arguments later.
@@ -255,7 +255,7 @@ mjt.dynamic_script = function (tag_id, url, text) {
  *   <a href="http://www.phpied.com/javascript-include-ready-onload/">phpied.com</a>
  * safari iframe hack from:
  *   <a href="http://pnomolos.com/article/5/dynamic-include-of-javascript-in-safari">pnomolos.com</a>
- * 
+ *
  * nix added completion function and hopeful safari future-proofing
  *
  */

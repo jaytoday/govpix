@@ -87,7 +87,7 @@ mjt.Markup.prototype.toMarkup = function () {
      *   bare strings are html encoded
      *   other objects are errors
      *
-     * this would be a good optimization target to speed up 
+     * this would be a good optimization target to speed up
      *  template rendering, it is one of the closest things
      *  there is to an inner loop.
      */

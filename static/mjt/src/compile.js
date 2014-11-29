@@ -63,7 +63,7 @@ mjt.Template = function (top) {
  *
  *
  */
-mjt.Template.prototype.flush_string = function(no_output, ignore_whitespace) { 
+mjt.Template.prototype.flush_string = function(no_output, ignore_whitespace) {
     var s = this.buffer.join('');
     this.buffer = [];
 
@@ -98,7 +98,7 @@ mjt.Template.prototype.flush_string = function(no_output, ignore_whitespace) {
 /**
  * warn into the template output
  */
-mjt.Template.prototype.warn = function(s) { 
+mjt.Template.prototype.warn = function(s) {
     this.buffer.push('<span style="outline-style:solid;color:red;">');
     this.buffer.push(mjt.htmlencode(s));
     this.buffer.push('</span>');
@@ -183,7 +183,7 @@ mjt.Template.prototype.compile_attrs = function(s) {
  *  looking for $$ or $var or ${expr} and expanding
  *
  */
-mjt.Template.prototype.compile_text = function(s) { 
+mjt.Template.prototype.compile_text = function(s) {
     var segs = s.split('$');
     if (segs.length == 1) {
         this.buffer.push(mjt.htmlencode(s));
@@ -269,7 +269,7 @@ mjt.Template.prototype.compile_onevent_attr = function (n, aname, avalue) {
     //  the dom is constructed.
     // also this really shouldn't use mjt._cb - if it ever breaks,
     //  fix it to use a separate callback table.
-    
+
     var uvar = mjt.uniqueid(aname + '_cb');  // unique variable
     this.code.push('var ' + uvar + ' = mjt.uniqueid("' + aname + '");\n');
     // this.code.push('if (typeof this._cb == "undefined") this._cb = {};\n');
@@ -286,7 +286,7 @@ mjt.Template.prototype.compile_onevent_attr = function (n, aname, avalue) {
  *
  *
  */
-mjt.Template.prototype.get_attributes = function(n, attrs, mjtattrs) { 
+mjt.Template.prototype.get_attributes = function(n, attrs, mjtattrs) {
 
     // extract mjt-specific attributes and put the rest in a list.
     //  expansion of dynamic attributes is done later.
@@ -381,7 +381,7 @@ mjt.Template.prototype.get_attributes = function(n, attrs, mjtattrs) {
  * compile a mjt.choose directive
  *
  */
-mjt.Template.prototype.compile_choose = function(cn, choose) { 
+mjt.Template.prototype.compile_choose = function(cn, choose) {
     var choose_state = 'init';
     var tablevar = false;
     var default_label = false;
@@ -407,7 +407,7 @@ mjt.Template.prototype.compile_choose = function(cn, choose) {
             n = nextchild;
             continue;
         }
-    
+
         if (nt == 1) { // ELEMENT_NODE
             var next_choose_state = choose_state;
             var mjtattrs = {};
@@ -468,12 +468,12 @@ mjt.Template.prototype.compile_choose = function(cn, choose) {
 if (nt != 1)
     print ('nt ' + nt)
 */
-    
+
         n = nextchild;
     }
 
     this.flush_string();
-    
+
     if (choose == '') {
         // end if-else chain
         this.code.push('}\n');
@@ -491,7 +491,7 @@ if (nt != 1)
  * compile a template from a dom representation.
  *
  */
-mjt.Template.prototype.compile_node = function(n, choose_state) { 
+mjt.Template.prototype.compile_node = function(n, choose_state) {
     if (typeof(choose_state) == 'undefined')
         choose_state = 'none';
     var nt = n.nodeType;
@@ -555,7 +555,7 @@ mjt.Template.prototype.compile_node = function(n, choose_state) {
         if (typeof(mjtattrs.def) != 'undefined') {
             this.flush_string();
             var defn = mjtattrs.def.match(/^([^(]+)\(([^)]*)\)$/ );
-            
+
             if (! defn) {
                 mjt.warn('bad mjt.def=', mjtattrs.def,
                          ': must contain an argument list');
@@ -623,7 +623,7 @@ mjt.Template.prototype.compile_node = function(n, choose_state) {
 
                     if (!toplevel) {
                         var templatevar = '__pkg';
-                        this.code.push(defname + ' = mjt.tfunc_factory(' + 
+                        this.code.push(defname + ' = mjt.tfunc_factory(' +
                                        mjt.json_from_js(mjtattrs.def) + ', ' +
                                        defname + ', ' + templatevar + ', ' +
                                        has_tasks + ', ' +
@@ -696,7 +696,7 @@ mjt.Template.prototype.compile_node = function(n, choose_state) {
                 var itemsid = mjt.uniqueid(itemid + '_items');
 
                 var funcvar = mjt.uniqueid('for_body');
-    
+
                 this.code.push('var ' + itemsid + ' = (' + forexpr + ');\n');
 
                 this.code.push('var ' + funcvar + ' = function ('
@@ -711,10 +711,10 @@ mjt.Template.prototype.compile_node = function(n, choose_state) {
 
                 completions.push(function () {
                     this.flush_string();
-    
+
                     this.code.push('} /* while once-- */\n');
                     this.code.push('}; /* function ' + funcvar + '(...) */\n');
-    
+
                     this.code.push('mjt.foreach(this, ' + itemsid + ', ' + funcvar + ');\n');
                 });
             }
@@ -917,7 +917,7 @@ mjt.Template.prototype.compile_node = function(n, choose_state) {
  * compile the template
  *
  */
-mjt.Template.prototype.compile_top = function(top) { 
+mjt.Template.prototype.compile_top = function(top) {
     var t0 = (new Date()).getTime();
 
     this.compile_node(top);

@@ -33,7 +33,7 @@ mjt.PagerSlice.prototype.request = function () {
         if (starti + count > chunk.count)
             count = chunk.count - starti;
         if (count <= 0) continue;
-            
+
         if (starti == 0 && count == chunk.count)
             results = results.concat(chunk.result);
         else
@@ -101,7 +101,7 @@ mjt.Pager.prototype.slice_chunks = function(start, count) {
     var end = start + count;
 
     //mjt.log('SLICING', this, start, count);
-    
+
     var chunks = this.chunks;
     var nexti = 0;
     for (var ci = 0; ci < chunks.length; ci++) {
@@ -121,7 +121,7 @@ mjt.Pager.prototype.slice_chunks = function(start, count) {
  *  returns a task for an arbitrary results slice
  */
 mjt.Pager.prototype.slicetask = function(start, count) {
-    return mjt.PagerSlice(this, start, count); 
+    return mjt.PagerSlice(this, start, count);
 };
 
 

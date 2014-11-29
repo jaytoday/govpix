@@ -68,7 +68,7 @@ var make_inspector_query = function (id) {
               },
             }
           }],
-          
+
           '/type/object/creator': [{
             optional:true,
             id:null,
@@ -120,7 +120,7 @@ freebase.Inspect.prototype.request = function () {
         proptypes[tid][propdesc.id].push(prop);
     }
     var pi, ps;
-    
+
     ps = result['/type/reflect/any_master'];
     if (ps === null) ps = [];
     for (pi = 0; pi < ps.length; pi++)

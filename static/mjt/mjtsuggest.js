@@ -10,7 +10,7 @@
  *
  *
  *  the menu may be:
- *     created or not - if the 
+ *     created or not - if the
  *     open or hidden
  *     waiting to hide (will stay open if it regains focus before timeout)
  *
@@ -24,7 +24,7 @@ mjt.Suggester = function (input_id) {
     // id of <input type="text"/>
     this.input_id = null;  // set later
 
-    // existing means that the final value must be 
+    // existing means that the final value must be
     //  an entry from a suggestion list, or the
     //  editor will never confirm.
     this.existing = false;
@@ -238,8 +238,8 @@ mjt.Suggester.prototype.open_menu = function (delay) {
     }
 
     // no hidden menu, create a new one
-    
-    if (delay === 0) {   
+
+    if (delay === 0) {
         // create immediately
         this.create_menu();
         return;
@@ -454,7 +454,7 @@ mjt.Suggester.prototype.set_active_item = function (item) {
         return;
 
     var sugg = this.lookup_suggestion_elt(item);
-    
+
     // hilite the new item if found
     if (typeof sugg !== 'undefined') {
         $(sugg).addClass('active_suggestion');
@@ -519,7 +519,7 @@ mjt.Suggester.prototype.arrow_updown = function (delta) {
     var item = this.item + delta;
     if (item < 0)
         return;
-    /* this.nitems doesnt exist! 
+    /* this.nitems doesnt exist!
     if (item > this.nitems+1)
         return;
     */
@@ -595,7 +595,7 @@ mjt.Suggester.prototype.text_keypress = function (input, ev) {
         if (input.selectionStart < input.value.length)
             return true;
 
-        this.complete_common_prefix();        
+        this.complete_common_prefix();
         return false;
 
       case 'ENTER':
@@ -757,7 +757,7 @@ mjt.Suggester.edit_onclick = function (handler_elt, event, kws) {
     if (! target.id)
         target.id = mjt.uniqueid('edittext');
 
-    
+
     var ctl = mjt.Suggester.edittext(target, undefined, undefined,
                                   undefined, kws.menufunc);
 

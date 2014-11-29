@@ -13,7 +13,7 @@
 
 /**
  *
- * a schema-aware MQL query object. 
+ * a schema-aware MQL query object.
  *
  * @param query   the mql query as a javascript object tree
  */
@@ -93,7 +93,7 @@ freebase.MqlQuery.prototype.find_mql_error_inside = function (d, path) {
 /**
  *
  *  QObject requires data from the net, so it is a task.
- * 
+ *
  *  @class QObject represents a node in a MQL query.
  *
  */
@@ -266,7 +266,7 @@ freebase.QObject.prototype.show = function () {
 /**
  *
  *  QProperty requires data from the net, so it is a task.
- * 
+ *
  *  @class QProperty represents a link in a MQL query.
  *
  *  @constructor
@@ -298,7 +298,7 @@ freebase.QProperty.prototype.init = function () {
         this.pathstr = '';
     this.depth = qo.depth + 1;
 
-    // the toplevel MqlQuery task depends on all 
+    // the toplevel MqlQuery task depends on all
     //  QProperties, which makes it wait for all
     //  schemas to be loaded and types to be computed.
     this.mq.require(this);
@@ -329,7 +329,7 @@ freebase.QProperty.prototype.init = function () {
         this.require(this.service.schema_cache.get('/type/object'));
         this.require(this.service.schema_cache.get('/type/value'));
         //this.require(this.service.schema_cache.getcore());
-     
+
         this.require(qo);
     }
 
@@ -585,7 +585,7 @@ freebase.QProperty.prototype.from_pdesc = function (prop) {
 /**
  *
  * parse mql property keys in a particular type context
- * 
+ *
  * this isn't a method of Schema because in many cases
  *  it doesn't actually need to know what the current
  *  implicit type is.
@@ -630,7 +630,7 @@ freebase.QProperty.prototype.lookup_prop_id = function(tid) {
 
 /**
  *  find the expected type for a mql property based on key
- *   
+ *
  *  @param schema is the implicit schema from context
  */
 freebase.QProperty.prototype.lookup_expected_type_id = function(schema) {
@@ -847,7 +847,7 @@ freebase.QProperty.reverse_constraint = function (q, subq) {
 //  var tree = { aa: 'a', bb: 'b', cc: { yy: 'foo', xx: { c: 'bar' } } };
 //  mjt.log('pivoted ', freebase.Schema.pivot(tree, ['cc', 'xx']));
 //
-//   
+//
 freebase.redangle = function (tree, path) {
 mjt.log('redang', tree, path);
     var k = path[0];

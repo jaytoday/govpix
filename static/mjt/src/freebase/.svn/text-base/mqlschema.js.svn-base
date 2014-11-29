@@ -29,7 +29,7 @@ freebase.mql_directives = {
 };
 
 
-freebase.mql_value_types = {  
+freebase.mql_value_types = {
     '/type/value': true,
     '/type/boolean': true,
     '/type/int': true,
@@ -107,7 +107,7 @@ freebase.SchemaCache.prototype.make_schema_query = function (tid) {
 
 /**
  *  a local copy of a mql /type/type object and its /type/propertys
- *  
+ *
  *  filling this in may require a network request, so it can
  *  be used as a mjt.Task.
  */

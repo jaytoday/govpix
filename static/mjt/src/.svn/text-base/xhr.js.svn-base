@@ -15,7 +15,7 @@ mjt.Xhr = mjt.define_task(null,
  *  @param [postbody]   if this is a POST, gives the body for the request
  *
  *  the following HTTP header will be added:
- *    X-Metaweb-Request: 1 
+ *    X-Metaweb-Request: 1
  */
 mjt.Xhr.prototype.init = function () {
     var xhr;
@@ -27,7 +27,7 @@ mjt.Xhr.prototype.init = function () {
     } else {
         return this.error('no XMLHttpRequest found');
     }
-    
+
     this.xhr = xhr;
     return this;
 };

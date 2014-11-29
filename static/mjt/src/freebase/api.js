@@ -130,7 +130,7 @@ freebase.MqlRead.prototype.build_envelope = function () {
     };
 
     if (this.query instanceof Array) {
-        if (typeof this.args.cursor == 'undefined' || 
+        if (typeof this.args.cursor == 'undefined' ||
             typeof this.args.cursor == 'boolean') {
             envelope.cursor = true;  // always ask for it for arrays
             this.start = 0;
@@ -164,7 +164,7 @@ freebase.MqlRead.prototype.response = function(o) {
 
     if (o.result === null)
         return this.empty_result();
-    
+
     if (typeof o.cursor === 'string')
         this.next_cursor = o.cursor;
 
@@ -224,7 +224,7 @@ freebase.MqlRead.prototype.next = function (reqcount) {
 /**
  *  @class bundles multiple MqlReads into a single HTTP request.
  *  @constructor
- * 
+ *
  */
 freebase.MqlReadMultiple = mjt.define_task(freebase.FreebaseJsonPTask);
 
@@ -233,7 +233,7 @@ freebase.MqlReadMultiple.prototype.init = function () {
 };
 
 /**
- * 
+ *
  */
 freebase.MqlReadMultiple.prototype.request = function () {
     var queries = {};

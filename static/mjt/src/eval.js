@@ -122,7 +122,7 @@ mjt.Codeblock.prototype.handle_exception = function (msg, e) {
             if (lineno > 0)
                 this.log_error_context(msg, e, lineno);
         }
-    } else { 
+    } else {
         // if no stack, we only show context if the exception
         //  was within generated code (since that's the only
         //  frame we have a line number for).
@@ -136,7 +136,7 @@ mjt.Codeblock.prototype.handle_exception = function (msg, e) {
             }
         }
     }
-    
+
     // hang the extra info off the error object for handlers upstack
     e.mjt_error = espec;
 };
@@ -144,7 +144,7 @@ mjt.Codeblock.prototype.handle_exception = function (msg, e) {
 mjt.Codeblock.prototype.log_error_context = function (msg, e, lineno) {
     var cx = this.extract_context(this.codestr, lineno, 5);
 
-    var pfx = '---' + lineno + '-->  '; 
+    var pfx = '---' + lineno + '-->  ';
     var spc = [];
     for (var i = 0; i < pfx.length; i++)
         spc.push(' ');
@@ -154,7 +154,7 @@ mjt.Codeblock.prototype.log_error_context = function (msg, e, lineno) {
                    '\n', pfx, cx.the_line, '\n',
                    spc, cx.next_lines.join('\n'+spc)].join('');
 
-    mjt.error('error', msg, 
+    mjt.error('error', msg,
               '\n    ' + e.name + ': ' + e.message + '\n',
               cxtext);
 };

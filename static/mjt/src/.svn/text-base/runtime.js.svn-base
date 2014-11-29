@@ -78,7 +78,7 @@ mjt.run = function (target, tfunc, targs) {
             target.appendChild(tmp);
         }
 
-        // TODO can this be removed if we refer to target by 
+        // TODO can this be removed if we refer to target by
         //  element rather than by id?
         if (1) {
             target.id = mjt.uniqueid('mjt_body');
@@ -104,7 +104,7 @@ mjt.run = function (target, tfunc, targs) {
         pkg.tcall.subst_id = target.id;
         //mjt.log('mjt.run compiled', target_id);
         pkg.tcall.display();
-    
+
         // set a variable in the containing scope - this
         // will only make a difference if pkg.compile_document is
         // called synchronously.
@@ -201,7 +201,7 @@ mjt.popup = function (tfunc, args, kws) {
                 sv = (sv + pos.x) + 'px';
             else if (sk == 'top' || sk == 'bottom')
                 sv = (sv + pos.y) + 'px';
-            else 
+            else
                 sv = sv + 'px';
         }
         div.style[sk] = sv;
@@ -321,7 +321,7 @@ mjt.spew = function (msg, args) {
         tag = document.createElement('pre');
 
         if (typeof(value) == 'string') {
-            text = value; 
+            text = value;
         } else {
             // try to format each arg as json if possible
             try {

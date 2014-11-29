@@ -7,7 +7,7 @@
  *    javascript objects and arrays
  *    pseudo-arrays:
  *      js strings
- *      jQuery result sets 
+ *      jQuery result sets
  *      html DOM nodelists
  *
  *  it doesn't handle:
@@ -43,7 +43,7 @@ mjt.foreach = function(self, items, func) {
 /**
  *
  * @private
- * unused for now... 
+ * unused for now...
  *
  * generate a wikilink
  *  this is called when $[] is seen in the input
@@ -151,7 +151,7 @@ mjt.TemplateCall.prototype.render = function(targs) {
                 tstates.push(t + ':' + this.tasks[t].state);
             mjt.openlog('applying', this.signature, this.targs, 'to id=', this.subst_id + ': ' + tstates.join(' '));
         }
-    
+
         try {
             this._no_render = false;
             this._markup = raw_tfunc.apply(this, this.targs);
@@ -192,7 +192,7 @@ mjt.TemplateCall.prototype.render = function(targs) {
             }
         }
     } finally {
-        // do this inside finally so it happens even if the error 
+        // do this inside finally so it happens even if the error
         // is re-thrown
         if (this._no_render)
             this._markup = undefined;
@@ -241,7 +241,7 @@ mjt.TemplateCall.prototype.mktask = function(name, task) {
 /**
  *
  *  the public name for a tfunc is actually a call
- *   to this wrapper.  this is because 
+ *   to this wrapper.  this is because
  *  a function created using mjt.def="tfunc(...)" needs to be
  *    called in several ways:
  *
@@ -259,7 +259,7 @@ mjt.TemplateCall.prototype.mktask = function(name, task) {
  *      instance.
  *
  *  @param signature  is a debugging name for the template function
- *  @param rawtfunc   is a function that returns markup 
+ *  @param rawtfunc   is a function that returns markup
  *  @param tpackage   is the TemplatePackage where rawtfunc was defined
  *  @param has_tasks  is true if rawtfunc included mjt.Task declarations
  *  @param toplevel   is true if rawtfunc has top-level scope
@@ -269,7 +269,7 @@ mjt.tfunc_factory = function (signature, rawtfunc, tpackage, has_tasks, toplevel
 
     var _inline_tcall = function () {  // varargs
         var ctor = arguments.callee;  // _inline_tcall
-  
+
         //mjt.log('calling ' + signature);
         if (this instanceof ctor) {
             // this is filled in by running the tcall
@@ -295,7 +295,7 @@ mjt.tfunc_factory = function (signature, rawtfunc, tpackage, has_tasks, toplevel
             return rawtfunc.apply(ctor.prototype, arguments);
         }
 
-  
+
         // if we werent called as a constructor, re-invoke
         //   ourselves that way to create an object.
         var self = new ctor();
@@ -426,7 +426,7 @@ mjt.TemplatePackage.prototype.from_head = function (head) {
           case 'TITLE':
             this.title = e.innerHTML;
             break;
-    
+
           case 'META':
             //d.push({ name: e.name, content: e.content, http_equiv: e.httpEquiv });
             switch (e.name) {
@@ -444,16 +444,16 @@ mjt.TemplatePackage.prototype.from_head = function (head) {
                 break;
             }
             break;
-    
+
           case 'SCRIPT':
             // skip this, its already been evaluated by the browser
             //d.push({ type: e.type, src: e.src, text: e.text });
             break;
-    
+
           case 'STYLE':
             //d.push({ media: e.media,  type: e.type, innerHTML: e.innerHTML });
             break;
-    
+
           case 'LINK':
             //d.push({ rel: e.rel, href: e.href, type: e.type, title: e.title, id: e.id });
             switch (e.rel) {
@@ -470,7 +470,7 @@ mjt.TemplatePackage.prototype.from_head = function (head) {
                 break;
             }
             break;
-    
+
           default:
             break;
         }

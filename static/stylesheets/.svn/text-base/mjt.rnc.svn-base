@@ -1,6 +1,6 @@
 include "emacs/lisp/nxml-mode/schema/xhtml.rnc"
 
-MjtAll.attrib = 
+MjtAll.attrib =
   attribute mjt.def { Text.datatype }?,
   attribute mjt.when { Text.datatype }?,
   attribute mjt.otherwise { Text.datatype }?,

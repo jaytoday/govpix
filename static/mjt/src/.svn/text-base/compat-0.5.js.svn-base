@@ -61,31 +61,31 @@ js/markup interface:
     currently
      mjt.run(id, tfunc)
        should be jQuery.fn.runmjt(tfunc, args)?
-     should have mjt.dom(markup) 
+     should have mjt.dom(markup)
        - creates the dom somewhere anonymous using innerHTML
 
      others: replace_html, ... in runtime
 
 
    object -> markup representation
-     should be .toMarkup() by analogy to 
+     should be .toMarkup() by analogy to
      this means something different right now -
       .toMarkup returns a flat string of html
 
      .toMarkupList() returns a list of markup objects
-        
+
    string -> markup
      automatic - strings are valid markup and will be quoted automatically
 
    string -> unquoted markup
      markup = mjt.bless(string)
        note only works on strings, should work on lists
- 
-   
-     
+
+
+
 
  later:
-    mjt.dom(markup) 
+    mjt.dom(markup)
        - installs events using jquery
        - runs mjt.script="ondomready" scripts
      to do this flatten_markup needs to accumulate more info:
